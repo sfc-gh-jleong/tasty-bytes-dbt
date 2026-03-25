@@ -47,7 +47,7 @@ jobs:
         run: snow connection test -x
 
       - name: Deploy the dbt project object in ${{ vars.SNOWFLAKE_ACCOUNT }} on ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
-        run: snow dbt deploy DEMO_DBT_PROJECT --source ./tasty_bytes_dbt_demo --force -x
+        run: snow dbt deploy DEMO_DBT_PROJECT --source ./tasty_bytes_dbt_demo -x
 
       - name: List all of the snowflake dbt project objects on ${{ vars.SNOWFLAKE_ACCOUNT }}
         run: snow dbt list -x
