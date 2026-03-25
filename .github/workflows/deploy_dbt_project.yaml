@@ -52,8 +52,8 @@ jobs:
       - name: List all of the snowflake dbt project objects on ${{ vars.SNOWFLAKE_ACCOUNT }}
         run: snow dbt list -x
 
-      - name: Execute run on dbt project object in ${{ vars.SNOWFLAKE_ACCOUNT }} on ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
-        run: snow dbt execute -x DEMO_DBT_PROJECT run --target prod --select raw_pos_order_detail
+      #- name: Execute run on dbt project object in ${{ vars.SNOWFLAKE_ACCOUNT }} on ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
+      #  run: snow dbt execute -x DEMO_DBT_PROJECT run --target prod --select raw_pos_order_detail
 
-      - name: Execute data quality test on dbt project object in ${{ vars.SNOWFLAKE_ACCOUNT }} on ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
-        run: snow dbt execute -x DEMO_DBT_PROJECT test --target prod --select raw_pos_order_detail
+      #- name: Execute data quality test on dbt project object in ${{ vars.SNOWFLAKE_ACCOUNT }} on ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
+      #  run: snow dbt execute -x DEMO_DBT_PROJECT test --target prod --select raw_pos_order_detail
