@@ -2,7 +2,10 @@
 --USE WAREHOUSE tasty_bytes_dbt_wh;
 
 CREATE OR REPLACE DATABASE tb_101; -- source
+
 CREATE OR REPLACE SCHEMA tb_101.raw;
+CREATE OR REPLACE SCHEMA tasty_bytes_dbt_db.dev;
+CREATE OR REPLACE SCHEMA tasty_bytes_dbt_db.prod;
 
 ALTER SCHEMA tasty_bytes_dbt_db.dev SET LOG_LEVEL = 'INFO';
 ALTER SCHEMA tasty_bytes_dbt_db.dev SET TRACE_LEVEL = 'ALWAYS';
