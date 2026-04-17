@@ -1,2 +1,2 @@
 select *
-from {{ source('tb_101', 'CUSTOMER_LOYALTY') }}
+from {{ source('tasty_bytes_dbt_db', 'CUSTOMER_LOYALTY') }}

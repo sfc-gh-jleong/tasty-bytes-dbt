@@ -1,2 +1,2 @@
 SELECT *
-FROM {{ source('tb_101', 'MENU') }}
+FROM {{ source('tasty_bytes_dbt_db', 'MENU') }}

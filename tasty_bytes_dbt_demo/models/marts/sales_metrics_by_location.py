@@ -4,7 +4,7 @@ def model(dbt, session):
     """
     This model demonstrates basic Snowpark transformations using dbt Python models.
     It joins location data with trucks and aggregates metrics by location.
-    Uses raw_pos models as sources instead of tb_101 directly.
+    Uses raw_pos models as sources instead of tasty_bytes_dbt_db directly.
     """
     # Get tables using dbt's ref function to reference the raw_pos models
     locations_df = dbt.ref('raw_pos_location')
